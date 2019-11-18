@@ -1,0 +1,12 @@
+@each(attribute in accessible_attributes)
+  @if(attribute.type.includes('character') || attribute.type.includes('real') && attribute.name !== 'email' && attribute.name !== 'password')
+    <input type="text" value="{{(data && data[attribute.name] )}}" name="{{ attribute.name }}" class="form-control mb-3" placeholder="{{ attribute.name }}"  />
+  @elseif(attribute.type.includes('integer'))
+    <input type="number" value="{{(data && data[attribute.name])}}" name="{{ attribute.name }}" class="form-control mb-3" placeholder="{{ attribute.name }}"  />
+  @elseif(attribute.name === 'password')
+    <input type="password" value="{{(data && data.password )}}" name="{{ attribute.name }}" class="form-control mb-3" placeholder="{{ attribute.name }}"  />
+  @elseif(attribute.name === 'email')
+    <input type="email" value="{{(data && data.email)}}" name="{{ attribute.name }}" class="form-control mb-3" placeholder="{{ attribute.name }}"  />
+  @endif
+@endeach
+

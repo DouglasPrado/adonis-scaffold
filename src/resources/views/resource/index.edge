@@ -1,0 +1,41 @@
+@layout('bootstrap.layout')
+@section('content')
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    <h1 class="h2">List from {{ lowerCase(nameController.split('Controller')[0]) }}s</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+          <a class="btn btn-sm btn-outline-secondary" href="{{ route(nameController + '.create') }}">New </a>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          @each(attributes in accessible_attributes)
+            <th>{{attributes.name}}</th>
+          @endeach
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @each(record in data.rows)
+          <tr>
+            @each(attributes in accessible_attributes)
+              <td>{{$parent.record[attributes.name]}}</td>
+            @endeach
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-secondary" href="{{ route(nameController + '.edit', {id: record.id}) }}">Edit</a>
+                <form method="POST" action="{{ route(nameController + '.destroy', {id: record.id}) }}?_method=DELETE">
+                  {{ csrfField() }}
+                  <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                </form>
+              </div>
+            </td>
+          </tr>
+        @endeach
+      </tbody>
+    </table>
+  </div>
+@endsection

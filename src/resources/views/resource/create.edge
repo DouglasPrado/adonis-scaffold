@@ -1,0 +1,11 @@
+@layout('bootstrap.layout')
+@section('content')
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    <h1 class="h2">{{(data ? 'Edit' : 'Create new')}} {{ lowerCase(nameController.split('Controller')[0]) }}</h1>
+  </div>
+  <form method="POST" action="{{( data ? route(nameController + '.update', {id: data.id}) : route(nameController + '.store') )}}{{(data ? '?_method=PUT' : '')}}" >
+    {{ csrfField() }}
+    @include('resource._form')
+    <button type="submit" class="btn btn-primary btn-flat">Save</button>
+  </form>
+@endsection

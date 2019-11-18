@@ -1,0 +1,14 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+        @each(table in tables)
+          <li class="nav-item">
+            <a class="nav-link" href="/{{table}}">
+              <span data-feather="file-text"></span>
+              {{table}}
+            </a>
+          </li>
+        @endeach
+    </ul>
+  </div>
+</nav>
