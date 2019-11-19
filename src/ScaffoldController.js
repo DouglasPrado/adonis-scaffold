@@ -1,6 +1,6 @@
 const Helpers = use("Helpers");
 const exists = Helpers.promisify(require("fs").exists);
-
+const path = use("path");
 class ScaffoldController {
   constructor() {
     this.resource = {
@@ -10,17 +10,18 @@ class ScaffoldController {
 
   async index({ view, response }) {
     this.getViews(view);
-    this.data = await this.resource.model.all();
+    const data = this.data || (await this.resource.model.all());
     if (this.resource.type === "api")
-      return response.send({ success: true, data: this.data });
+      return response.send({ success: true, data });
 
     return view.render("resource.index", {
       ...(await this.getCommonProps()),
-      data: this.data
+      data
     });
   }
+
   async show({ params: { id }, response }) {
-    const data = await this.resource.model.findOrFail(id);
+    const data = this.data || (await this.resource.model.findOrFail(id));
     this.resource.model.with && (await data.load(this.resource.model.with));
     if (this.resource.type === "api")
       return response.send({ success: true, data });
@@ -28,8 +29,6 @@ class ScaffoldController {
 
   async create({ view }) {
     this.getViews(view);
-    const { accessible_attributes } = await this.resource.model.getDataTypes();
-    const nameController = this.constructor.name;
     return view.render("resource.create", {
       ...(await this.getCommonProps())
     });
@@ -38,7 +37,8 @@ class ScaffoldController {
   async store({ request, response }) {
     const resourceParam = request.only(this.resource.model.visible);
     try {
-      const data = await this.resource.model.create(resourceParam);
+      const data =
+        this.data || (await this.resource.model.create(resourceParam));
       await data.reload();
       if (this.resource.type === "api")
         return response.send({ success: true, data });
@@ -50,10 +50,8 @@ class ScaffoldController {
 
   async edit({ params: { id }, view }) {
     this.getViews(view);
-    const data = await this.resource.model.findOrFail(id);
+    this.data = this.data || (await this.resource.model.findOrFail(id));
     this.resource.model.with && (await data.load(this.resource.model.with));
-    const { accessible_attributes } = await this.resource.model.getDataTypes();
-    const nameController = this.constructor.name;
     return view.render("resource.create", {
       ...(await this.getCommonProps()),
       data
@@ -89,7 +87,7 @@ class ScaffoldController {
     const isExist = await exists(Helpers.viewsPath("resource"));
     if (isExist) return;
     return (view._loader._viewsPath = Helpers.viewsPath(
-      "../../src/resources/views"
+      path.join(__dirname, "../src/resources/views")
     ));
   }
 

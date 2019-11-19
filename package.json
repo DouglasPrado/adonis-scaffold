@@ -1,0 +1,24 @@
+{
+  "name": "adonis-scaffold",
+  "version": "1.0.0",
+  "description": "Scaffold provider to adonisjs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouglasPrado/adonis-scaffold.git"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis",
+    "scaffold"
+  ],
+  "author": "Douglas Prado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DouglasPrado/adonis-scaffold/issues"
+  },
+  "homepage": "https://github.com/DouglasPrado/adonis-scaffold#readme"
+}

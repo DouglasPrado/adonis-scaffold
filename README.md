@@ -1,11 +1,16 @@
 # Adonis Scaffold
+
 #### Getting Started
+
 ##### Installation
+
 Install adonis-scaffold by running the below command.
-```npm install adonis-scaffold --save```
+`npm install adonis-scaffold --save`
 
 ##### Register providers.
+
 Also add providers for the newly installed dependencies.
+
 ```
 const providers = [
   'adonis-scaffold/providers/ScaffoldProvider'
@@ -13,7 +18,9 @@ const providers = [
 ```
 
 ##### Controllers
+
 Controller example:
+
 ```
 "use strict";
 
@@ -34,8 +41,9 @@ module.exports = UserController;
 ```
 
 ##### Models
+
 Model example:
-The model need two functions required ```static get hidden()```and ```static get visible()```.
+The model need two functions required `static get hidden()`and `static get visible()`.
 
 ```
 "use strict";
@@ -52,11 +60,25 @@ class User extends ScaffoldModel {
 }
 module.exports = User;
 ```
+
 ###### Relationship
-For relationship the function ```static get with()``` is required.
+
+For relationship the function `static get with()` is required.
 Example:
+
 ```
 static get with(){
     return ['tokens']
+}
+```
+
+###### Query override
+
+Example:
+
+```
+async index(request) {
+  this.data = await this.resource.model.first();
+  return super.index(request);
 }
 ```
