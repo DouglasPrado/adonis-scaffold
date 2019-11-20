@@ -1,6 +1,6 @@
 {
   "name": "adonis-scaffold",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Scaffold provider to adonisjs.",
   "main": "index.js",
   "scripts": {

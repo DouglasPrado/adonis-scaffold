@@ -50,7 +50,7 @@ class ScaffoldController {
 
   async edit({ params: { id }, view }) {
     this.getViews(view);
-    this.data = this.data || (await this.resource.model.findOrFail(id));
+    const data = this.data || (await this.resource.model.findOrFail(id));
     this.resource.model.with && (await data.load(this.resource.model.with));
     return view.render("resource.create", {
       ...(await this.getCommonProps()),
@@ -86,9 +86,7 @@ class ScaffoldController {
   async getViews(view) {
     const isExist = await exists(Helpers.viewsPath("resource"));
     if (isExist) return;
-    return (view._loader._viewsPath = Helpers.viewsPath(
-      path.join(__dirname, "../src/resources/views")
-    ));
+    return (view._loader._viewsPath = path.join(__dirname, "resources/views"));
   }
 
   getCommonProps = async () => {
