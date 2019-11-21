@@ -3,5 +3,4 @@ node_js:
   - node
   - 10.11.0
 sudo: false
-install:
-  - npm install
+script: npm install
