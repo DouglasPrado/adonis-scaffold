@@ -1,5 +1,7 @@
 # Adonis Scaffold
 
+[![Build Status](https://travis-ci.org/DouglasPrado/adonis-scaffold.svg?branch=master)](https://travis-ci.org/DouglasPrado/adonis-scaffold)
+
 #### Getting Started
 
 ##### Installation
