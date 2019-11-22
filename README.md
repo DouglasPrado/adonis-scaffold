@@ -88,10 +88,10 @@ async index(request) {
 }
 ```
 
-## Changelog
+#### Changelog
 
 [CHANGELOG](CHANGELOG.md)
 
-## Credits
+#### Credits
 
 Thanks to the community of [AdonisJs](http://www.adonisjs.com/).
