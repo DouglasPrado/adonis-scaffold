@@ -87,3 +87,11 @@ async index(request) {
   return super.index(request);
 }
 ```
+
+## Changelog
+
+[CHANGELOG](CHANGELOG.md)
+
+## Credits
+
+Thanks to the community of [AdonisJs](http://www.adonisjs.com/).
