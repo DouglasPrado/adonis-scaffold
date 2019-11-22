@@ -1,6 +1,9 @@
 # Adonis Scaffold
 
 [![Build Status](https://travis-ci.org/DouglasPrado/adonis-scaffold.svg?branch=master)](https://travis-ci.org/DouglasPrado/adonis-scaffold)
+[![Version](https://img.shields.io/npm/v/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
+[![Downloads](https://img.shields.io/npm/dt/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
+[![License](https://img.shields.io/npm/l/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
 
 #### Getting Started
 
