@@ -8,6 +8,8 @@
 [![Downloads](https://img.shields.io/npm/dt/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
 [![License](https://img.shields.io/npm/l/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
 
+Application scaffolding in AdonisJS is a technique that allows the developer to define and create a basic application that can create, retrieve, update and delete objects. Basically CRUD (create, Read, Update, Delete) data operations are common in most of the applications.
+
 #### Getting Started
 
 ##### Installation
