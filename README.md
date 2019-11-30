@@ -1,5 +1,7 @@
 # Adonis Scaffold
 
+![Adonis Scaffold Logo](https://github.com/DouglasPrado/adonis-scaffold/blob/master/adonis-scaffold.png)
+
 
 [![Build Status](https://travis-ci.org/DouglasPrado/adonis-scaffold.svg?branch=master)](https://travis-ci.org/DouglasPrado/adonis-scaffold)
 [![Version](https://img.shields.io/npm/v/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
