@@ -100,3 +100,4 @@ async index(request) {
 #### Credits
 
 Thanks to the community of [AdonisJs](http://www.adonisjs.com/).
+
