@@ -1,6 +1,6 @@
 {
   "name": "adonis-scaffold",
-  "version": "1.0.3",
+  "version": "0.0.4",
   "description": "Scaffold provider to adonisjs.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "scaffold"
   ],
   "author": "Douglas Prado",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DouglasPrado/adonis-scaffold/issues"
   },
