@@ -9,19 +9,19 @@
 
 Application scaffolding in AdonisJS is a technique that allows the developer to define and create a basic application that can create, retrieve, update and delete objects. Basically CRUD (create, Read, Update, Delete) data operations are common in most of the applications.
 
-#### Getting Started
+### Getting Started
 
-##### Requirements
+#### Requirements
 
 - Adonis ^4.0
 - Postgres ^9.0
 
-##### Installation
+#### Installation
 
 Install adonis-scaffold by running the below command.
 `npm install adonis-scaffold --save`
 
-##### Register providers.
+#### Register providers.
 
 Also add providers for the newly installed dependencies.
 
@@ -31,7 +31,7 @@ const providers = [
 ];
 ```
 
-##### Enviroments
+#### Enviroments
 
 LOGO_URL=https://adonisjs.com/images/header-logo.svg
 
@@ -41,7 +41,7 @@ COLOR_PRIMARY=#220052
 
 COLOR_SECONDARY=#FB2F51
 
-##### Controllers
+#### Controllers
 
 Example from Controller extending ScaffoldController:
 
@@ -64,7 +64,7 @@ module.exports = UserController;
 
 ```
 
-##### Models
+#### Models
 
 Example from Model extending ScaffoldModel:
 The model need two functions required `static get hidden()`and `static get visible()`.
@@ -85,7 +85,7 @@ class User extends ScaffoldModel {
 module.exports = User;
 ```
 
-###### Relationship
+##### Relationship
 
 For relationship the function `static get with()` is required.
 Example:
@@ -96,7 +96,7 @@ static get with(){
 }
 ```
 
-###### Query override
+##### Query override
 
 Example:
 
@@ -107,7 +107,7 @@ async index(request) {
 }
 ```
 
-##### Views ( Pending )
+#### Views ( Pending )
 
 accessible_attributes:
 
@@ -118,13 +118,13 @@ accessible_attributes:
 }
 ```
 
-###### Layout
+##### Layout
 
-###### Index
+##### Index
 
-###### Create
+##### Create
 
-###### Forms
+##### Forms
 
 #### Changelog
 
