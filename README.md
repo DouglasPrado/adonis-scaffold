@@ -34,8 +34,11 @@ const providers = [
 ##### Enviroments
 
 LOGO_URL=https://adonisjs.com/images/header-logo.svg
+
 LOGO_PATH="/images/logo.svg"
+
 COLOR_PRIMARY=#220052
+
 COLOR_SECONDARY=#FB2F51
 
 ##### Controllers
