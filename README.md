@@ -2,10 +2,6 @@
 
 ![Adonis Scaffold Logo](https://github.com/DouglasPrado/adonis-scaffold/blob/master/adonis-scaffold.png)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6876aea593c0f89c29ba2ec811600ceb857a7fb0
 [![Build Status](https://travis-ci.org/DouglasPrado/adonis-scaffold.svg?branch=master)](https://travis-ci.org/DouglasPrado/adonis-scaffold)
 [![Version](https://img.shields.io/npm/v/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
 [![Downloads](https://img.shields.io/npm/dt/adonis-scaffold.svg?style=flat)](https://www.npmjs.com/package/adonis-scaffold)
@@ -108,7 +104,6 @@ async index(request) {
 }
 ```
 
-<<<<<<< HEAD
 ##### Views ( Pending )
 
 accessible_attributes:
@@ -128,8 +123,6 @@ accessible_attributes:
 
 ###### Forms
 
-=======
->>>>>>> 6876aea593c0f89c29ba2ec811600ceb857a7fb0
 #### Changelog
 
 [CHANGELOG](CHANGELOG.md)
@@ -137,7 +130,3 @@ accessible_attributes:
 #### Credits
 
 Thanks to the community of [AdonisJs](http://www.adonisjs.com/).
-<<<<<<< HEAD
-=======
-
->>>>>>> 6876aea593c0f89c29ba2ec811600ceb857a7fb0
