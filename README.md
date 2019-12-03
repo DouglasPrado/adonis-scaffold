@@ -41,6 +41,8 @@ COLOR_PRIMARY=#220052
 
 COLOR_SECONDARY=#FB2F51
 
+TYPE=api
+
 #### Controllers
 
 Example from Controller extending ScaffoldController:
